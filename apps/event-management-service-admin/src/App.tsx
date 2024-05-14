@@ -17,6 +17,10 @@ import { EventList } from "./event/EventList";
 import { EventCreate } from "./event/EventCreate";
 import { EventEdit } from "./event/EventEdit";
 import { EventShow } from "./event/EventShow";
+import { FeedbackList } from "./feedback/FeedbackList";
+import { FeedbackCreate } from "./feedback/FeedbackCreate";
+import { FeedbackEdit } from "./feedback/FeedbackEdit";
+import { FeedbackShow } from "./feedback/FeedbackShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -63,6 +67,13 @@ const App = (): React.ReactElement => {
           edit={EventEdit}
           create={EventCreate}
           show={EventShow}
+        />
+        <Resource
+          name="Feedback"
+          list={FeedbackList}
+          edit={FeedbackEdit}
+          create={FeedbackCreate}
+          show={FeedbackShow}
         />
       </Admin>
     </div>

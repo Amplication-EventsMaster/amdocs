@@ -36,3 +36,11 @@ model Event {
   id         String    @id @default(cuid())
   updatedAt  DateTime  @updatedAt
 }
+
+model Feedback {
+  content   String?
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  rating    Int?
+  updatedAt DateTime @updatedAt
+}
